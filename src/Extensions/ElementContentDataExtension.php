@@ -29,7 +29,11 @@ class ElementContentDataExtension extends DataExtension
                 ->setTitle('Link')
                 ->setDescription('Optional. Add a call to action link.')
         );
-        $fields->insertBefore($fields->dataFieldByName('ElementLinkID'), 'HTML');
+
+        $fields->insertBefore(
+            'HTML',
+            $fields->dataFieldByName('ElementLinkID')
+        );
 
         $image = $fields->dataFieldByName('Image')
                 ->setDescription('Optional. Display an image with this content.')

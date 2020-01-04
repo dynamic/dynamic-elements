@@ -1,5 +1,9 @@
 language: php
 
+services:
+  - mysql
+  - postgresql
+
 env:
   global:
     - COMPOSER_ROOT_VERSION=4.0.x-dev
